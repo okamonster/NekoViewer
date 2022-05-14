@@ -12,9 +12,12 @@ export const View = () => {
         <Suspense fallback="null">
           <OrbitControls />
           <Environment preset="sunset" background />
-          <mesh></mesh>
+          <mesh>
+            <primitive object={gltf.scene} />
+          </mesh>
         </Suspense>
       </Canvas>
+      <h2>ねこビューワー</h2>
     </div>
   );
 };
